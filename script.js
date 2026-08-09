@@ -396,3 +396,55 @@ submitButton.textContent = "Submit Enquiry";
 
 }
 
+/* ==================================================
+   COURSE DETAILS MODAL
+   ================================================== */
+
+const courseModal = document.getElementById("courseModal");
+const courseModalClose = document.querySelector(".course-modal-close");
+const courseModalOverlay = document.querySelector(".course-modal-overlay");
+const courseDetailsButtons = document.querySelectorAll(".course-button");
+
+courseDetailsButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const selectedCourse = button.getAttribute("data-course");
+
+        if (selectedCourse === "ssc") {
+            courseModal.classList.add("active");
+            courseModal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        }
+
+    });
+
+});
+
+
+function closeCourseModal() {
+
+    courseModal.classList.remove("active");
+    courseModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+
+}
+
+
+if (courseModalClose) {
+    courseModalClose.addEventListener("click", closeCourseModal);
+}
+
+
+if (courseModalOverlay) {
+    courseModalOverlay.addEventListener("click", closeCourseModal);
+}
+
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape" && courseModal.classList.contains("active")) {
+        closeCourseModal();
+    }
+
+});
