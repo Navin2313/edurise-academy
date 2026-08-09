@@ -230,6 +230,15 @@ if (admissionForm) {
         const course = document.getElementById("course");
 
         const message = document.getElementById("message");
+       const submitButton = admissionForm.querySelector('button[type="submit"]');
+
+let successMessage = admissionForm.querySelector(".form-success-message");
+
+if (!successMessage) {
+    successMessage = document.createElement("div");
+    successMessage.className = "form-success-message";
+    admissionForm.appendChild(successMessage);
+}
 
 
         /* Full Name */
@@ -347,6 +356,12 @@ const whatsappURL =
     encodeURIComponent(whatsappMessage);
 
 
+/* Show sending state */
+
+submitButton.disabled = true;
+submitButton.textContent = "Sending...";
+
+
 /* Open WhatsApp */
 
 window.open(whatsappURL, "_blank");
@@ -355,6 +370,20 @@ window.open(whatsappURL, "_blank");
 /* Reset form */
 
 event.target.reset();
+
+
+/* Show success message */
+
+successMessage.textContent =
+    "Your enquiry has been sent successfully. We will contact you shortly.";
+
+successMessage.classList.add("show");
+
+
+/* Restore button */
+
+submitButton.disabled = false;
+submitButton.textContent = "Submit Enquiry";
 
     });
 
