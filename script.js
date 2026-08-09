@@ -411,11 +411,25 @@ courseDetailsButtons.forEach(function (button) {
 
         const selectedCourse = button.getAttribute("data-course");
 
-        if (selectedCourse === "ssc") {
-            courseModal.classList.add("active");
-            courseModal.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
-        }
+       if (selectedCourse === "ssc" || selectedCourse === "police") {
+
+    const modalCourseCategory = document.getElementById("modalCourseCategory");
+    const modalCourseTitle = document.getElementById("modalCourseTitle");
+    const modalCourseDescription = document.getElementById("modalCourseDescription");
+
+    if (selectedCourse === "police") {
+
+        modalCourseCategory.textContent = "Police";
+        modalCourseTitle.textContent = "Police Constable Course";
+        modalCourseDescription.textContent =
+            "Complete preparation program for Police Constable examinations with physical preparation, regular tests and expert guidance.";
+
+    }
+
+    courseModal.classList.add("active");
+    courseModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+}
 
     });
 
