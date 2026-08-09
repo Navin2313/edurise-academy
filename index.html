@@ -417,9 +417,9 @@
 
                         </div>
 
-                        <a href="#admission" class="course-button">
-                            View Details
-                        </a>
+                        <button type="button" class="course-button" data-course="ssc">
+                           View Details
+                        </button>
 
                     </div>
 
@@ -1349,6 +1349,70 @@
 
 
     </main>
+    <!-- ========================================
+     COURSE DETAILS MODAL
+========================================= -->
+
+<div class="course-modal" id="courseModal" aria-hidden="true">
+
+    <div class="course-modal-overlay"></div>
+
+    <div class="course-modal-content" role="dialog" aria-modal="true">
+
+        <button
+            type="button"
+            class="course-modal-close"
+            aria-label="Close course details"
+        >
+            ×
+        </button>
+
+        <p class="course-modal-category">
+            SSC
+        </p>
+
+        <h2>
+            SSC Foundation Course
+        </h2>
+
+        <p class="course-modal-description">
+            Complete preparation program for SSC competitive examinations
+            with structured study, regular tests and expert guidance.
+        </p>
+
+        <div class="course-modal-info">
+
+            <div>
+                <span>Duration</span>
+                <strong>12 Months</strong>
+            </div>
+
+            <div>
+                <span>Fees</span>
+                <strong>₹9,999</strong>
+            </div>
+
+        </div>
+
+        <h3>
+            Course Features
+        </h3>
+
+        <ul class="course-modal-features">
+            <li>✓ Complete SSC exam preparation</li>
+            <li>✓ Regular test series</li>
+            <li>✓ Expert faculty guidance</li>
+            <li>✓ Doubt-solving support</li>
+            <li>✓ Structured study material</li>
+        </ul>
+
+        <a href="#admission-form" class="primary-button course-modal-apply">
+            Apply Now
+        </a>
+
+    </div>
+
+</div>
 
 
     <!-- ========================================
