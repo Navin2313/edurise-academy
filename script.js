@@ -380,6 +380,13 @@ successMessage.textContent =
 successMessage.classList.add("show");
 
 
+/* Hide success message after 4 seconds */
+
+setTimeout(function () {
+    successMessage.classList.remove("show");
+}, 4000);
+
+
 /* Restore button */
 
 submitButton.disabled = false;
