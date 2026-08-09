@@ -3561,3 +3561,30 @@ textarea:focus {
     }
 
 }
+
+/* ==================================================
+   ADMISSION FORM SUCCESS MESSAGE
+   ================================================== */
+
+.form-success-message {
+    grid-column: 1 / -1;
+    display: none;
+    padding: 13px 16px;
+    border-radius: var(--radius-small);
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #047857;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-success-message.show {
+    display: block;
+}
+
+.admission-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
