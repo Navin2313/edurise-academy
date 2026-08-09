@@ -1128,6 +1128,8 @@
                         id="name"
                         name="name"
                         placeholder="Enter your name"
+                        autocomplete="name"
+                        required
                     >
 
                 </div>
@@ -1144,7 +1146,11 @@
                         id="phone"
                         name="phone"
                         placeholder="Enter your mobile number"
-                    >
+                        autocomplete="tel"
+                        inputmode="numeric"
+                        maxlength="10"
+                        required
+                >
 
                 </div>
 
@@ -1160,6 +1166,8 @@
                         id="email"
                         name="email"
                         placeholder="Enter your email"
+                        autocomplete="email"
+                        required
                     >
 
                 </div>
@@ -1171,7 +1179,8 @@
                         Select Course
                     </label>
 
-                    <select id="course" name="course">
+                    <select id="course" name="course"
+                        required>
 
                         <option value="">
                             Select a course
@@ -1209,6 +1218,8 @@
                         name="message"
                         rows="5"
                         placeholder="Write your message"
+                        maxlength="500"
+                        required
                     ></textarea>
 
                 </div>
