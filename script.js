@@ -439,6 +439,22 @@ if (courseModalClose) {
 if (courseModalOverlay) {
     courseModalOverlay.addEventListener("click", closeCourseModal);
 }
+const courseModalApply = document.querySelector(".course-modal-apply");
+
+if (courseModalApply) {
+    courseModalApply.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        closeCourseModal();
+
+        setTimeout(function () {
+            document.getElementById("admission-form").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 100);
+    });
+}
 
 
 document.addEventListener("keydown", function (event) {
