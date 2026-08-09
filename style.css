@@ -3588,3 +3588,157 @@ textarea:focus {
     cursor: not-allowed;
     transform: none;
 }
+
+/* ==================================================
+   COURSE DETAILS MODAL
+   ================================================== */
+
+.course-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.course-modal.active {
+    display: flex;
+}
+
+.course-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+}
+
+.course-modal-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px;
+    border-radius: var(--radius-large);
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-medium);
+}
+
+.course-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.course-modal-close:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.course-modal-category {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.course-modal-content h2 {
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.course-modal-description {
+    margin-bottom: 25px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.course-modal-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.course-modal-info div {
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-small);
+    background-color: var(--background-color);
+}
+
+.course-modal-info span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.course-modal-info strong {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.course-modal-content h3 {
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.course-modal-features {
+    margin-bottom: 25px;
+}
+
+.course-modal-features li {
+    padding: 9px 0;
+    color: var(--text-light);
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.course-modal-features li:last-child {
+    border-bottom: none;
+}
+
+.course-modal-apply {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .course-modal {
+        padding: 15px;
+    }
+
+    .course-modal-content {
+        padding: 28px 20px;
+        max-height: 92vh;
+    }
+
+    .course-modal-content h2 {
+        font-size: 23px;
+        padding-right: 35px;
+    }
+
+    .course-modal-info {
+        grid-template-columns: 1fr;
+    }
+}
